@@ -44,11 +44,18 @@ function redConverter() {
 
   //Aqui tu codigo
   for(let i = 0; i < pixels.length; i += 4){
-    pixels[i][1] = 0;
-    pixels[i][2] = 0; 
-  }
+    pixels[i + 1] = 0; // G = 0
+    pixels[i + 2] = 0; // B = 0 
+   }
+ 
   handler.savePixels(pixels, outputPath);
+  
+
+
+
+
 }
+
 
 /**
  * Esta función debe transformar una imagen en escala de verdes.
